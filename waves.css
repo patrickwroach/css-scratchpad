@@ -1,0 +1,41 @@
+html {
+  overflow-x: hidden;
+  margin-top: 25%;
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+.content-container {
+  position: relative;
+  height: 100%;
+}
+.content-container.waves {
+  background: url(waves.png) repeat-x bottom;
+  height: 62px;
+  z-index: 0;
+  padding: 0;
+  animation: tideShift 30s linear infinite;
+  bottom: 0;
+  position: fixed;
+}
+.content-container.waves.foreground {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  position: fixed;
+  animation: tideShift 60s linear infinite;
+  margin-bottom: -10px;
+  transform: scaleX(-1);
+}
+#the-snake {
+  position: absolute;
+  z-index: 1;
+  bottom: -50px;
+  right: 25%;
+}
+@keyframes tideShift {
+  100% {
+    background-position: 100% 0%;
+  }
+}

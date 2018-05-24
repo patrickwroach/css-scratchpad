@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>The Law</title>
+    <style type="text/css">
+        #badge-container {
+            width: 130px;
+            height: 140px;
+            transform:rotate(360deg);
+        }
+
+        #badge {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: all .5s ease;
+            display: block;
+        }
+
+            #badge:hover {
+                transform: scale(1.15);
+            }
+     
+        @media (min-width: 500px) {
+
+            #badge-container {
+                animation: tilt-spin .8s linear;
+            }
+        }
+
+
+
+
+
+        #star-six {
+            width: 0;
+            height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 100px solid black;
+            position: relative;
+            left: 4px;
+            top: 4px;
+        }
+
+            #star-six:after {
+                width: 0;
+                height: 0;
+                border-left: 60px solid transparent;
+                border-right: 60px solid transparent;
+                border-top: 100px solid black;
+                position: absolute;
+                content: "";
+                top: 30px;
+                left: -60px;
+            }
+
+        .circle {
+            width: 10%;
+            height: 10%;
+            border-radius: 50%;
+            position: absolute;
+            background: black;
+        }
+
+        .horz-left {
+            left: 0;
+        }
+
+        .horz-right {
+            right: 0;
+        }
+
+        .horz-mid {
+            left: 57px;
+        }
+
+        .vert-top {
+            top: 0;
+        }
+
+        .vert-bottom {
+            bottom: 0;
+        }
+
+        .vert-upper-mid {
+            top: 21%;
+        }
+
+        .vert-lower-mid {
+            bottom: 21%;
+        }
+
+        #emblazoning {
+            color: white;
+            font-family: monospace;
+            text-align: center;
+            position: absolute;
+            top: 18%;
+            left: 19%;
+            font-size: 20px;
+            line-height: 10%;
+            text-transform: uppercase;
+        }
+
+        @keyframes tilt-spin {
+            0%{transform:rotate(0deg);}
+            91% {
+                transform: rotate(365deg);
+            }
+
+            92% {
+                transform: rotate(358deg);
+            }
+
+            93% {
+                transform: rotate(361deg);
+            }
+
+            97% {
+                transform: rotate(359deg);
+            }
+
+            99% {
+                transform: rotate(360deg);
+            }
+        }
+        @-webkit-keyframes tilt-spin {
+            91% {
+                -webkit-transform: rotate(365deg);
+            }
+
+            92% {
+                -webkit-transform: rotate(358deg);
+            }
+
+            93% {
+                -webkit-transform: rotate(361deg);
+            }
+
+            97% {
+                -webkit-transform: rotate(359deg);
+            }
+
+            99% {
+                -webkit-transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="badge-container">
+        <div id="badge">
+            <div id="star-six"></div>
+            <div class="circle horz-mid vert-top"></div>
+            <div class="circle horz-mid vert-bottom"></div>
+            <div class="circle horz-left vert-upper-mid"></div>
+            <div class="circle horz-left vert-lower-mid"></div>
+            <div class="circle horz-right vert-upper-mid"></div>
+            <div class="circle horz-right vert-lower-mid"></div>
+            <div id="emblazoning">
+                <p>dev</p>
+                <p>&#9830;</p>
+                <p>justice</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

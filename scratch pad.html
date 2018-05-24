@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="scratch-pad.css" />
+    <title></title>
+    <!--<script type="text/javascript">
+         $(document).ready(function () {
+             var stickyNavTop = $('#snakener').offset().top;
+
+             var stickyNav = function () {
+                 var scrollTop = $(window).scrollTop();
+
+                 if (scrollTop > stickyNavTop) {
+                     $('.nav').addClass('sticky');
+                 } else {
+                     $('.nav').removeClass('sticky');
+                 }
+             };
+
+             stickyNav();
+
+             $(window).scroll(function () {
+                 stickyNav();
+             });
+         });
+    </script>-->
+</head>
+<body>
+    <div class="content-container" id="cube-container">
+        <div class="content ">
+            <div id="infinity-container-small">
+                <div id="infinity">
+                </div>
+                <div class="cubeLines">
+
+                </div>
+                <div class="cubeLines left">
+
+                </div>
+                <div class="cubeLines right">
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="content-container dark chevron-line top">
+
+    </div>
+
+
+
+
+    <div class="content-container" id="snake-container">
+        <div class="content" id="snake">
+
+
+            <div id="snakeBody">
+                <div class="scaleRow a">
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+
+
+                </div>
+                <div class="scaleRow odd b">
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+
+                </div>
+                <div class="scaleRow c">
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+
+
+                </div>
+                <div class="scaleRow odd d">
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+
+                </div>
+                <div class="scaleRow e">
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+
+                </div>
+                <div class="scaleRow odd f">
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+
+                </div>
+                <div class="scaleRow g">
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+
+                </div>
+                <div class="scaleRow odd h">
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+                    <div class="scale"></div>
+
+                </div>
+
+            </div>
+            <div id="snakeHead">
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="content-container dark">
+        <div class="content">
+            <div id="chev-container">
+
+                <div class="chev">
+                    <div class="unfold left">
+                        <div class="parallelogram">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="chev reversed">
+                    <div class="unfold">
+                        <div class="parallelogram light">
+                        </div>
+                    </div>
+                </div>
+                <div class="chev">
+                    <div class="unfold left">
+                        <div class="parallelogram">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="chev reversed">
+                    <div class="unfold">
+                        <div class="parallelogram light">
+                        </div>
+                    </div>
+                </div>
+                <div class="chev">
+                    <div class="unfold left">
+                        <div class="parallelogram">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="chev reversed">
+                    <div class="unfold">
+                        <div class="parallelogram light">
+                        </div>
+                    </div>
+                </div>
+                <div class="chev reversed">
+                    <div class="unfold">
+                        <div class="parallelogram light">
+                        </div>
+                    </div>
+                </div>
+                <div class="chev">
+                    <div class="unfold left">
+                        <div class="parallelogram">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="chev reversed">
+                    <div class="unfold">
+                        <div class="parallelogram light">
+                        </div>
+                    </div>
+                </div>
+                <div class="chev">
+                    <div class="unfold left">
+    <div class="parallelogram">
+
+    </div>
+</div>
+                </div>
+                <div class="chev reversed">
+                    <div class="unfold">
+                        <div class="parallelogram light">
+                        </div>
+                    </div>
+                </div>
+                <div class="chev">
+                    <div class="unfold left">
+                        <div class="parallelogram">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="chev">
+                    <div class="unfold left">
+                        <div class="parallelogram">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="chev reversed">
+                    <div class="unfold">
+                        <div class="parallelogram light">
+                        </div>
+                    </div>
+                </div>
+                <div class="chev">
+                    <div class="unfold left">
+                        <div class="parallelogram">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="chev reversed">
+                    <div class="unfold">
+                        <div class="parallelogram light">
+                        </div>
+                    </div>
+                </div>
+                <div class="chev">
+                    <div class="unfold left">
+                        <div class="parallelogram">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="chev reversed">
+                    <div class="unfold">
+                        <div class="parallelogram light">
+                        </div>
+                    </div>
+                </div>
+                <div class="chev reversed">
+                    <div class="unfold">
+                        <div class="parallelogram light">
+                        </div>
+                    </div>
+                </div>
+                <div class="chev">
+                    <div class="unfold left">
+                        <div class="parallelogram">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="chev reversed">
+                    <div class="unfold">
+                        <div class="parallelogram light">
+                        </div>
+                    </div>
+                </div>
+                <div class="chev">
+                    <div class="unfold left">
+                        <div class="parallelogram">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="chev reversed">
+                    <div class="unfold">
+                        <div class="parallelogram light">
+                        </div>
+                    </div>
+                </div>
+                <div class="chev">
+                    <div class="unfold left">
+                        <div class="parallelogram">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="pic-spread" class="content-container">
+        <div class="content">
+            <img class="center" src="zep.svg" />
+            <img class="left side"src="zep.svg" />
+            <img class="right side" src="zep.svg" />
+        </div>
+
+    </div>
+    <div id="spin-container" class="content-container">
+        <div class="content">
+
+             <div class="spinner"></div>
+            <div class="spinner one-oclock"></div>
+            <div class="spinner two-oclock"></div>
+            <div class="spinner three-oclock"></div>
+            <div class="spinner four-oclock"></div>
+            <div class="spinner five-oclock"></div>
+            <div class="spinner six-oclock"></div>
+            </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

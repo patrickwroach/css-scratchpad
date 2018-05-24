@@ -1,0 +1,16 @@
+﻿@primary_color: green;
+
+.rounded(@radius: 5px) {  
+  -moz-border-radius: @radius;  
+  -webkit-border-radius: @radius;  
+  border-radius: @radius;  
+}
+
+#container {
+  background: @primary_color;
+  .rounded(5px);
+
+  div {
+    color: red;
+  }
+}
