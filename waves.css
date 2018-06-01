@@ -1,17 +1,25 @@
+@import "normalize.css";
 html {
   overflow-x: hidden;
-  margin-top: 25%;
-  height: 100%;
+  height: 100vh;
 }
 body {
   height: 100%;
+  background-image: -webkit-linear-gradient(#C6E4EE 0%, #C6E4EE 40%, #FED1AE 60%, #FAA0B9 70%, #CB7DCB 80%, #757ECB 100%);
+  background-image: -moz-linear-gradient(#C6E4EE 0%, #C6E4EE 40%, #FED1AE 60%, #FAA0B9 70%, #CB7DCB 80%, #757ECB 100%);
+  background-image: -o-linear-gradient(#C6E4EE 0%, #C6E4EE 40%, #FED1AE 60%, #FAA0B9 70%, #CB7DCB 80%, #757ECB 100%);
+  background-image: linear-gradient(#C6E4EE 0%, #C6E4EE 40%, #FED1AE 60%, #FAA0B9 70%, #CB7DCB 80%, #757ECB 100%);
 }
 .content-container {
   position: relative;
   height: 100%;
 }
+.content-container .content {
+  width: 100%;
+}
 .content-container.waves {
-  background: url(waves.png) repeat-x bottom;
+  width: 100%;
+  background: url("waves.png") repeat-x bottom;
   height: 62px;
   z-index: 0;
   padding: 0;
@@ -20,7 +28,6 @@ body {
   position: fixed;
 }
 .content-container.waves.foreground {
-  position: absolute;
   z-index: 2;
   bottom: 0;
   position: fixed;
@@ -28,14 +35,144 @@ body {
   margin-bottom: -10px;
   transform: scaleX(-1);
 }
-#the-snake {
-  position: absolute;
+.content-container.sidebar {
+  position: fixed;
+  top: 0;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 25px;
+  right: 0;
+  width: 20vw;
+}
+#ship-container {
+  transition: 1s;
+  animation: floatShip 5s linear infinite;
+  width: 200px;
+  position: fixed;
   z-index: 1;
-  bottom: -50px;
-  right: 25%;
+  bottom: 5px;
+  left: 10%;
+}
+#ship-container.position2 {
+  left: 20%;
+}
+#ship-container.position3 {
+  left: 30%;
+}
+#ship-container.position4 {
+  left: 40%;
+}
+#ship-container.position5 {
+  left: 50%;
+}
+#ship-container.position6 {
+  left: 60%;
+}
+#ship-container img#ship {
+  width: 100%;
+  height: auto;
+}
+.content-container .content .section#map-wrapper {
+  position: relative;
+  width: 80vw;
+  height: 85vh;
+  min-width: 500px;
+  z-index: 0;
+}
+.content-container .content .section#map-wrapper #map-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: table;
+  text-align: center;
+  max-width: 1225px;
+}
+.content-container .content .section#map-wrapper .embellishments {
+  position: absolute;
+  width: 5vw;
+  height: auto;
+  z-index: 1;
+}
+.content-container .content .section#map-wrapper .embellishments#compass {
+  bottom: 10vh;
+  right: 5vw;
+  width: 10vw;
+}
+.content-container .content .section#map-wrapper .embellishments#woodcut-ship {
+  top: 5vh;
+  left: 10vw;
+}
+.content-container .content .section#map-wrapper .embellishments#fish {
+  top: 40vh;
+  left: 30vw;
+}
+.content-container .content .section#map-wrapper #path {
+  width: 100%;
+  max-width: 1225px;
+  height: 85vh;
+  z-index: 10;
+  min-width: 500px;
+  max-width: height:auto;
+  display: table-cell;
+  position: relative;
+  vertical-align: middle;
+}
+.content-container .content .section#map-wrapper #path a[id^="button"] {
+  transition: .5s;
+  transform-origin: 50%, 50%;
+  cursor: pointer;
+}
+.content-container .content .section#map-wrapper #path a[id^="button"].active {
+  animation: floatIcon 5s ease-in-out infinite;
+}
+.content-container .content .section#map-wrapper #path a[id^="button"]:hover {
+  animation: floatIcon 5s ease-in-out infinite;
+}
+.content-container .content .section#map-wrapper button {
+  position: absolute;
+  z-index: 2;
+}
+.content-container .content .section#map-wrapper button.active {
+  background: red;
+}
+.content-container .content .section#map-wrapper button#button1 {
+  top: 10%;
+  left: 10%;
+}
+.content-container .content .section#map-wrapper button#button2 {
+  top: 29%;
+  left: 45%;
+}
+.content-container .content .section#map-wrapper button#button3 {
+  top: 80%;
+  left: 90%;
+}
+.content-container .content .section.copy div[id^="stop"] {
+  display: none;
+}
+.content-container .content .section.copy div[id^="stop"].active {
+  display: block;
 }
 @keyframes tideShift {
   100% {
-    background-position: 100% 0%;
+    background-position: 100% 0;
+  }
+}
+@keyframes floatShip {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes floatIcon {
+  50% {
+    transform: translateY(-1vh);
   }
 }

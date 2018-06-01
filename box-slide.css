@@ -1,0 +1,19 @@
+.content-container {
+  height: 100vh;
+}
+.box {
+  display: inline-block;
+  width: 20vw;
+  margin-right: 5vw;
+  position: relative;
+  color: aqua;
+  height: 20vw;
+}
+@keyframes tideShift {
+  0% {
+    top: 0;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}

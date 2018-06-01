@@ -1,47 +1,227 @@
-﻿html{
-    overflow-x:hidden;
-    margin-top:25%;
-    height:100%;
-}
-body{
-    height:100%;
-}
-.content-container{
-    position:relative;
-    height:100%;
-    &.waves{
-        background:url(waves.png) repeat-x bottom;
-        height:62px;
-        z-index:0;
-        padding:0;
-        animation: tideShift 30s linear infinite;
-        bottom:0;
-        position:fixed;
-        
-        
-        &.foreground{
-            position:absolute;
-            z-index:2;
-            bottom:0;
-            position:fixed;
-            animation: tideShift 60s linear infinite;
-            margin-bottom:-10px;
-            transform:scaleX(-1);
-                     
-        }
-      
-    }
- 
-}
-#the-snake{
-    position:absolute;
-    z-index:1;
-    bottom:-50px;
-    right:25%;
-}
-@keyframes tideShift {
-  
-        100% {background-position: 100% 0%;}
-    
+﻿@import "normalize.css";
+
+html {
+  overflow-x: hidden;
+  height: 100vh;
+
 }
 
+body {
+
+  height: 100%;
+  background-image: -webkit-linear-gradient(#C6E4EE 0%, #C6E4EE 40%, #FED1AE 60%, #FAA0B9 70%, #CB7DCB 80%, #757ECB 100%);
+  background-image: -moz-linear-gradient(#C6E4EE 0%, #C6E4EE 40%, #FED1AE 60%, #FAA0B9 70%, #CB7DCB 80%, #757ECB 100%);
+  background-image: -o-linear-gradient(#C6E4EE 0%, #C6E4EE 40%, #FED1AE 60%, #FAA0B9 70%, #CB7DCB 80%, #757ECB 100%);
+  background-image: linear-gradient(#C6E4EE 0%, #C6E4EE 40%, #FED1AE 60%, #FAA0B9 70%, #CB7DCB 80%, #757ECB 100%);
+
+}
+
+.content-container {
+  position: relative;
+  height: 100%;
+
+  .content {
+    width: 100%;
+  }
+
+  &.waves {
+    width: 100%;
+    background: url("waves.png") repeat-x bottom;
+    height: 62px;
+    z-index: 0;
+    padding: 0;
+    animation: tideShift 30s linear infinite;
+    bottom: 0;
+    position: fixed;
+
+    &.foreground {
+     
+      z-index: 2;
+      bottom: 0;
+      position: fixed;
+      animation: tideShift 60s linear infinite;
+      margin-bottom: -10px;
+      transform: scaleX(-1);
+
+    }
+
+  }
+
+  &.sidebar {
+    position: fixed;
+    top: 0;
+    background:fade(white, 50%);
+    padding:25px;
+    right: 0;
+    width: 20vw;
+
+  }
+
+}
+
+#ship-container {
+  transition: 1s;
+  animation: floatShip 5s linear infinite;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  bottom: 5px;
+  left: 10%;
+
+  &.position2 {
+    left: 20%;
+  }
+
+  &.position3 {
+    left: 30%;
+  }
+
+  &.position4 {
+    left: 40%;
+  }
+
+  &.position5 {
+    left: 50%;
+  }
+
+  &.position6 {
+    left: 60%;
+  }
+
+  img#ship {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+.content-container {
+  .content {
+    .section {
+      &#map-wrapper {
+        position: relative;
+        width: 80vw;
+        height: 85vh;
+        min-width: 500px;
+        z-index:0;
+        #map-background {
+            width: 100%;
+            height: 100%;
+            position:absolute;
+            display:table;
+            text-align:center;
+            max-width:1225px;
+
+          }
+
+        .embellishments{
+          position: absolute;
+          width:5vw;
+          height:auto;
+          z-index:1;
+          &#compass{
+            bottom:10vh;
+            right:5vw;
+            width:10vw;
+          }
+          &#woodcut-ship{
+            top:5vh;
+            left:10vw;
+          }
+
+          &#fish{
+            top:40vh;
+            left:30vw;
+          }
+        }  
+        #path{
+          width:100%;
+          max-width:1225px;
+          height:85vh;
+          z-index:10;
+          min-width: 500px;
+          max-width:
+          height:auto;
+          display:table-cell;
+          position: relative;
+          vertical-align: middle;
+          a[id^="button"] {
+            transition: .5s;
+            transform-origin: 50%, 50%;
+            cursor: pointer;
+            &.active{
+              animation:floatIcon 5s ease-in-out infinite;
+            }
+            &:hover{
+              animation:floatIcon 5s ease-in-out infinite;
+            
+            }
+          }
+        }
+        button {
+          position: absolute;
+          z-index:2;
+
+          &.active {
+            background: red;
+          }
+
+          &#button1 {
+            top: 10%;
+            left: 10%;
+          }
+
+          &#button2 {
+            top: 29%;
+            left: 45%;
+          }
+
+          &#button3 {
+            top: 80%;
+            left: 90%;
+          }
+        }
+      }
+
+      &.copy {
+        div[id^="stop"] {
+          display: none;
+
+          &.active {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+//Animations
+@keyframes tideShift {
+  100% {
+    background-position: 100% 0;
+  }
+
+}
+@keyframes floatShip {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(2deg);
+  }
+
+  75% {
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+
+}
+@keyframes floatIcon {
+  50%{
+    transform:translateY(-1vh);
+  }
+}
